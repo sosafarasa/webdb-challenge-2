@@ -32,13 +32,13 @@ router.post('/', async (req, res) => {
   const project = req.body;
   if (project.project_name) {
     try {
-      const inserted = await Projects.add(project)
-      res.status(201).json(inserted)
+      const added = await Projects.add(project)
+      res.status(201).json(added)
     } catch (error){
         res.status(500).json({ message: 'An error occured trying to create the project' })
     }
   } else {
-      res.status(400).json({ message: 'The name of the project is required' })
+      res.status(400).json({ message: 'Failed to add project' })
   }
 })
 

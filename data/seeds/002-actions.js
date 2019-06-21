@@ -13,7 +13,7 @@ exports.seed = function(knex, Promise) {
           project_id: 1
         },
         {
-          id: 7,
+          id: 2,
           action_description: "another action description",
           action_notes: "the action notes",
           project_id: 1
